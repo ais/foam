@@ -250,7 +250,7 @@ export function createMarkdownParser(
   const parser = unified()
     .use(markdownParse, { gfm: true })
     .use(frontmatterPlugin, ['yaml'])
-    .use(wikiLinkPlugin);
+    .use(wikiLinkPlugin, { aliasDivider: '|' });
 
   const plugins = [
     titlePlugin,
